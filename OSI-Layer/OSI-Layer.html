@@ -93,42 +93,28 @@
                     <li>Layer Logical Link Control (LLC) bertanggung jawab untuk mengidentifikasi dan membungkus protokol network layer dan mengontrol pemeriksaan kesalahan dan juga melakukan sinkronisasi pada frame.</li>
                 </ol>
                 
-                <h2>Cara Kerja Jaringan LAN</h2>
-                <p>Sebetulnya, jaringan LAN bekerja dengan cara-cara yang mirip dengan jaringan internet lainnya. Namun pada jaringan LAN, jaringannya akan menghubungkan komputer bersama-sama dan menyediakan akses bersama ke printer, file, dan lain sebagainya. Untuk arsitektur jaringannya sendiri, LAN masuk ke dalam kategori peer to peer atau client server.
-                    <br>Karena termasuk ke dalam arsitektur client server, beberapa perangkat klien sudah terhubung ke server pusat. Dengan begitu, perangkat-perangkat tersebut bisa mengakses aplikasi hingga menyimpan beberapa file tertentu.</p>
+                <h3>Fungsi Data Link</h3>
+                <p>Data Link layer berfungsi untuk menentukan bagaimana bit data dikelompokkan menjadi format yang disebut sebagai frame. Selain itu, pada level ini terjadi koreksi kesalahan, flow control, pengalamatan perangkat keras (seperti halnya Media Access Control Address (MAC Address)), dan menetukan bagaimana perangkat-perangkat jaringan seperti hub, bridge, repeater, dan switch layer 2 beroperasi. </p>
                     <img src="https://dwblog-ecdf.kxcdn.com/wp-content/uploads/2022/09/cara-kerja-jaringan-LAN-768x432.jpg">
                 <br>
-                <h2>Kelebihan dan Kekurangan LAN</h2>
-                <p>Adapun kelebihan dan kekurangan dari LAN sendiri, yaitu sebagai berikut :</p>
+                <h2>Network</h2>
+                <p>Network layer adalah lapisan layer yang memiliki tanggungjawab menetapkan jalur yang digunakan untuk transfer data. Layer network bertugas untuk mendefinisikan alamat IP sehingga setiap komputer dapat saling terkoneksi dalam satu jaringan.</p>
+                <img src="Layer3.jpeg">
+                <h3>Fungsi Network</h3>
+                <p>Network layer memiliki fungsi mendefinisikan alamat IP, membuat header paket, dan melakukan routing internetworking, adapun fungsi lainnya adalah melaksanakan proses routing dan membuat header untuk setiap paket data yang ada.</p>
+                <h2>Cara Kerja Model OSI</h2>
                 <ol>
-                    <li>Kelebihan LAN :
-                        <ul>
-                            <li>Ketika penggunanya menggunakan jaringan LAN, penggunanya bisa dengan mudah berbagi resource dengan komputer yang lainnya. Karena kelebihan ini, penggunanya bisa mengerjakan sesuatu dengan lebih efisien.</li>
-                            <li>LAN tidak membutuhkan operator telekomunikasi untuk dapat membuat jaringannya.</li>
-                            <li>Jaringan LAN tidak memerlukan biaya yang besar, karena hal ini jangkauannya hanya mencakup area kecil dan tidak membutuhkan perangkat mahal, seperti serat optik hingga satelit.</li>
-                            <li>Data jaringan LAN lebih terpusat. Kelebihan ini akan memudahkan user untuk saling mengakses file yang dimiliki oleh komputer lainnya.</li>
-                        </ul>
-                    </li>
-                    <li>Kekurangan LAN :
-                        <ul>
-                            <li>Keamanan jaringan LAN cukup rentan. Sebab, kebanyakan user tidak dapat menjaga rahasia password yang dimiliki, sehingga hal ini menyebabkan user yang tidak sah bisa dengan mudah menerobos masuk ke dalam jaringan melalui user tadi.</li>
-                            <li>Seperti yang diketahui, luas wilayah koneksi jaringan LAN cukup terbatas dan hanya mencakup area lokal saja.</li>
-                            <li>Munculnya beberapa masalah server pusat yang bisa berpengaruh pada seluruh jaringan komputer, bahkan mampu menyebabkan komputer tidak bisa melakukan komunikasi dengan komputer lainnya.</li>
-                            <li>Instalasi jaringan LAN lebih mahal tergantung dari kebutuhan dan kondisi yang ada di lapangan.</li>
-                        </ul>
-                    </li>
+                    <li>Informasi berawal dari layer Application. Informasi kemudian melewati layer presentation dan layer session. Pada tahap ini biasanya belum dilakukan transformasi data. Informasi yang melalui ketiga layer ini disebut PDU (Protocol Data Unit) atau data saja.</li>
+                    <li>Setelah sampai di layer Transport, data akan mengalami transformasi ke bentuk lain yang disebut segmen.</li>
+                    <li>Segmen mengalir ke layer network dan kemudian diubah menjadi packet.</li>
+                    <li>Packet mengalir ke layer data link dan kemudian diubah menjadi frame.</li>
+                    <li>Terakhir, frame mengalir ke layer physical dan kemudian diubah menjadi bits atau bit-bit.</li>
+                    <li>Pada layer ini, bit-bit diubah menjadi besaran fisik, seperti arus listrik, gelombang elektromagnetik, dan sebagainya.</li>
                 </ol>
-            </div>
-            <p>Nah bagaimana? apakah sudah jelas dan cukup dimengertri? jika kamu belum mengerti, kamu boleh melihat video dibawah ini agar kamu bisa mempelajarinya dan memahaminya lebih dalam.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OXyweS45dy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Proses pengubahan bentuk dari satu layer ke layer berikutnya dilakukan dengan menambahkan header khusus yang disebut enkapsulasi. Proses enkapsulasi terjadi berulang-ulang hingga data diubah menjadi bit-bit. Kemudian bit-bit ini dikirim ke host target melalui media jaringan.
+                   <br> Setelah informasi (berupa bit-bit) sampai di host target maka proses kebalikannya, yaitu melepas header satu per satu dari layer terbawah hingga ke layer paling atas akan dilakukan. Proses melepas header ini disebut de-enkapsulasi.</p>
         </section>
     </Main>
-    <footer>
-        <h2>Daftar Pustaka</h2>
-        <a href="https://www.jagoanhosting.com/blog/lan-adalah/">Jagoan Hosting</a>
-        <a href="https://id.wikipedia.org/wiki/Jaringan_area_lokal">Wikipedia</a>
-        <a href="https://www.dewaweb.com/blog/pengertian-lan/">Dewaweb</a>
-    </footer>
     </div>
 </body>
 </html>
